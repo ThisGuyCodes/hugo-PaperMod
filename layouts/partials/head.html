@@ -168,7 +168,7 @@
         'analytics_storage': 'denied'
     });
     gtag('js', new Date());
-    gtag('config', '{{ .Site.GoogleAnalytics }}', { 'anonymize_ip': {{- $pc.AnonymizeIP -}} });
+    gtag('config', '{{ .Site.GoogleAnalytics }}', { 'anonymize_ip': {{- .Site.Config.Privacy.GoogleAnalytics.AnonymizeIP -}} });
 </script>
 {{- template "partials/templates/opengraph.html" . }}
 {{- template "partials/templates/twitter_cards.html" . }}
